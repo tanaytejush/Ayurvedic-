@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Plant Classification</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: #333;
+            background-color: #f3f7f6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #4caf50, #2e7d32);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        #about {
+            background-color: #fff;
+            border-radius: 12px;
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #upload {
+            background-color: #e8f5e9;
+            border-radius: 12px;
+            margin: 2rem auto;
+            max-width: 500px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #upload input[type="file"] {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 1rem;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        #upload button {
+            background-color: #4caf50;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        #upload button:hover {
+            background-color: #388e3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Results Section */
+        #results {
+            margin-top: 2rem;
+        }
+
+        #resultDisplay {
+            background-color: #fff;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            margin: 0 auto;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #resultDisplay p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Ayurvedic Plant Classification & Recognition</h1>
+        <p>Discover the rich heritage of Ayurveda through Machine Learning</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About the Project</h2>
+        <p>This project utilizes Machine Learning to classify and recognize Ayurvedic plants, helping individuals understand the significance and medicinal properties of various plants used in Ayurveda. Upload an image of a plant, and let our model reveal its potential!</p>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload">
+        <h2>Upload Plant Image</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="plantImage" accept="image/*" required>
+            <button type="submit">Classify</button>
+        </form>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results">
+        <h2>Classification Results</h2>
+        <div id="resultDisplay">
+            <p>Upload an image to see classification results.</p>
+            <!-- Dynamic results will appear here after submission -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Project by Abhinav Kumar Thakur</p>
+        <p>&copy; 2024 Ayurvedic Plant Classifier</p>
+    </footer>
+</body>
+</html>
